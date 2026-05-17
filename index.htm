@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rudra Electrical — Suresh Ashok Sonwale</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+:root{
+  --bd:#0a1628;--bm:#1a3a6b;--bl:#2558a8;--bp:#e8f0fb;
+  --gold:#f5a623;--goldd:#c77f00;--orange:#e06b1f;
+  --cream:#f4f6fb;--white:#fff;--td:#121b2e;--tm:#2a3f6e;
+  --sh:0 6px 28px rgba(10,22,40,.13);--shl:0 14px 44px rgba(10,22,40,.18);
+  --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--td);min-height:100vh;}
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-thumb{background:var(--bm);border-radius:3px;}
+
+/* NAVBAR */
+.navbar{background:linear-gradient(110deg,var(--bd) 0%,var(--bm) 100%);padding:0 18px;display:flex;align-items:center;justify-content:space-between;height:66px;position:sticky;top:0;z-index:9000;box-shadow:0 4px 24px rgba(0,0,0,.35);}
+.logo-wrap{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.logo-circle{width:42px;height:42px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;animation:hb 3s ease-in-out infinite;flex-shrink:0;}
+@keyframes hb{0%,100%{transform:scale(1);}50%{transform:scale(1.07);}}
+.logo-wrap h1{font-family:'Playfair Display',serif;color:#fff;font-size:16px;line-height:1.2;}
+.logo-wrap p{color:var(--gold);font-size:10px;font-weight:600;letter-spacing:.6px;}
+.nav-links{display:flex;gap:5px;align-items:center;flex-wrap:wrap;}
+.nb{background:transparent;border:1.5px solid rgba(255,255,255,.28);color:#fff;padding:6px 13px;border-radius:20px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;transition:all .18s;white-space:nowrap;}
+.nb:hover,.nb.active{background:var(--gold);border-color:var(--gold);color:var(--bd);font-weight:700;}
+.nb.prim{background:var(--gold);border-color:var(--gold);color:var(--bd);font-weight:700;}
+
+/* PAGES */
+.page{display:none;}.page.active{display:block;}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,var(--bd) 0%,#0e2550 45%,#1a3a6b 100%);min-height:90vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:50px 20px;}
+.hp{position:absolute;inset:0;opacity:.05;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:28px 28px;}
+.hg{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,.15) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);}
+.hc{text-align:center;z-index:2;max-width:720px;}
+.hbadge{display:inline-flex;align-items:center;gap:7px;background:rgba(245,166,35,.18);border:1px solid rgba(245,166,35,.5);color:var(--gold);padding:7px 20px;border-radius:24px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:22px;animation:fD .8s ease;}
+.hero h1{font-family:'Playfair Display',serif;color:#fff;font-size:clamp(28px,6vw,58px);line-height:1.13;margin-bottom:10px;animation:fU .8s ease .1s both;}
+.hero h1 em{color:var(--gold);font-style:normal;}
+.hero-owner{color:rgba(255,255,255,.75);font-size:14px;margin-bottom:6px;animation:fU .8s ease .2s both;}
+.hero-sub{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.3px;margin-bottom:38px;animation:fU .8s ease .3s both;}
+.hbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fU .8s ease .4s both;}
+.btn-gold{background:var(--gold);color:var(--bd);border:none;padding:13px 32px;border-radius:28px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;box-shadow:0 6px 22px rgba(245,166,35,.4);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(245,166,35,.55);}
+.btn-ow{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45);padding:13px 32px;border-radius:28px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;}
+.btn-ow:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.hstats{display:flex;gap:36px;justify-content:center;margin-top:50px;animation:fU .8s ease .5s both;flex-wrap:wrap;}
+.hs{text-align:center;}.hsn{font-family:'Playfair Display',serif;color:var(--gold);font-size:30px;font-weight:900;}.hsl{color:rgba(255,255,255,.65);font-size:11.5px;margin-top:2px;}
+@keyframes fU{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fD{from{opacity:0;transform:translateY(-14px);}to{opacity:1;transform:translateY(0);}}
+
+/* SECTIONS */
+.sec{padding:62px 20px;max-width:1120px;margin:0 auto;}
+.sechd{text-align:center;margin-bottom:42px;}
+.sechd h2{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,36px);color:var(--bd);margin-bottom:8px;}
+.sechd p{color:var(--tm);font-size:14px;}
+.div{width:54px;height:4px;background:linear-gradient(90deg,var(--bm),var(--gold));border-radius:2px;margin:10px auto;}
+.fg2{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:18px;}
+.fc{background:#fff;border-radius:var(--r);padding:24px 20px;box-shadow:var(--sh);display:flex;gap:15px;align-items:flex-start;border:1px solid rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s;}
+.fc:hover{transform:translateY(-4px);box-shadow:var(--shl);}
+.fc-ico{font-size:32px;flex-shrink:0;}
+.fc h3{color:var(--bd);font-size:14.5px;margin-bottom:5px;}
+.fc p{color:#777;font-size:12px;line-height:1.6;}
+
+/* PRODUCTS */
+.ftabs{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-bottom:30px;}
+.ftab{background:#fff;border:1.5px solid #dde;padding:7px 16px;border-radius:20px;cursor:pointer;font-size:12px;font-weight:500;transition:all .18s;color:var(--tm);}
+.ftab.active,.ftab:hover{background:var(--bm);border-color:var(--bm);color:#fff;}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(208px,1fr));gap:16px;}
+.sc2{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .25s;border:1px solid rgba(0,0,0,.05);}
+.sc2:hover{transform:translateY(-5px);box-shadow:var(--shl);}
+.sci{height:126px;background:var(--bp);display:flex;align-items:center;justify-content:center;font-size:50px;position:relative;}
+.scb-badge{position:absolute;top:8px;right:8px;background:var(--gold);color:var(--bd);font-size:9px;font-weight:800;padding:3px 8px;border-radius:10px;}
+.scbd{padding:12px 14px 14px;}
+.sccat{color:var(--bm);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:3px;}
+.scnm{font-weight:700;color:var(--bd);font-size:14px;margin-bottom:4px;}
+.scdesc{color:#777;font-size:11px;line-height:1.55;margin-bottom:10px;}
+.scft{display:flex;align-items:center;justify-content:space-between;}
+.scpr{font-family:'Playfair Display',serif;color:var(--bd);font-size:15px;font-weight:700;}
+.scpr small{color:#aaa;font-size:9.5px;font-family:'DM Sans',sans-serif;}
+.abtn{background:var(--bm);color:#fff;border:none;padding:6px 12px;border-radius:7px;font-size:11px;font-weight:700;cursor:pointer;transition:background .18s;}
+.abtn:hover{background:var(--bd);}
+
+/* FORMS */
+.fpg{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 16px;background:linear-gradient(145deg,var(--bp) 0%,var(--cream) 100%);}
+.fcard{background:#fff;border-radius:26px;padding:38px;width:100%;max-width:465px;box-shadow:var(--shl);animation:fU .5s ease;}
+.fcard.wide{max-width:635px;}
+.fhd{text-align:center;margin-bottom:26px;}
+.fhd-ico{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;margin:0 auto 13px;}
+.fhd-ico.gr{background:var(--bp);}
+.fhd-ico.gl{background:#fff8e1;}
+.fhd h2{font-family:'Playfair Display',serif;color:var(--bd);font-size:22px;margin-bottom:4px;}
+.fhd p{color:#aaa;font-size:13px;}
+.fgrp{margin-bottom:15px;}
+.flbl{display:block;font-size:12px;font-weight:700;color:var(--tm);margin-bottom:5px;}
+.fi{width:100%;padding:10px 13px;border:1.5px solid #e2e2e2;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--td);transition:border .18s;outline:none;background:#fff;}
+.fi:focus{border-color:var(--bm);box-shadow:0 0 0 3px rgba(26,58,107,.09);}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+textarea.fi{resize:vertical;min-height:82px;}
+select.fi{appearance:none;}
+.fsub{width:100%;padding:12px;background:linear-gradient(135deg,var(--bm),var(--bd));color:#fff;border:none;border-radius:11px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;margin-top:5px;letter-spacing:.2px;}
+.fsub:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 8px 22px rgba(10,22,40,.28);}
+.fsub:disabled{opacity:.65;cursor:not-allowed;}
+.fsub.gbtn{background:linear-gradient(135deg,var(--gold),var(--goldd));color:var(--bd);}
+.flink{text-align:center;margin-top:14px;font-size:12.5px;color:#aaa;}
+.flink a{color:var(--bm);font-weight:700;cursor:pointer;}
+.flink a:hover{text-decoration:underline;}
+.fdiv{display:flex;align-items:center;gap:11px;margin:14px 0;color:#ccc;font-size:12px;}
+.fdiv::before,.fdiv::after{content:'';flex:1;height:1px;background:#ececec;}
+.alert{padding:11px 14px;border-radius:8px;font-size:12.5px;margin-bottom:14px;}
+.aok{background:#e8f0fb;color:var(--bd);border:1px solid #b3c9f0;}
+.aerr{background:#fff0f0;color:#b00020;border:1px solid #ffc8c8;}
+.hidden{display:none!important;}
+
+/* EMAIL STATUS */
+.esb{background:linear-gradient(135deg,#e8f0fb,#fff8e1);border:1px solid #b3c9f0;border-radius:10px;padding:12px 14px;margin-bottom:13px;display:flex;align-items:center;gap:9px;font-size:12.5px;}
+.esb.sending{border-color:#ffe082;background:linear-gradient(135deg,#fff8e1,#fff3e0);}
+.esb.sent{border-color:#90b3e0;background:linear-gradient(135deg,#e8f0fb,#f0f5ff);}
+.esb.failed{border-color:#ef9a9a;background:linear-gradient(135deg,#ffebee,#fff);}
+.spin{width:18px;height:18px;border:2.5px solid #e0e0e0;border-top-color:var(--bm);border-radius:50%;animation:sp .7s linear infinite;flex-shrink:0;}
+@keyframes sp{to{transform:rotate(360deg);}}
+
+/* DASHBOARD */
+.dash{max-width:1200px;margin:0 auto;padding:26px 18px;}
+.dhdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px;gap:12px;flex-wrap:wrap;}
+.dwl h2{font-family:'Playfair Display',serif;color:var(--bd);font-size:22px;}
+.dwl p{color:#aaa;font-size:12px;}
+.lbtn{background:#fff0f0;color:#b00;border:1.5px solid #ffc8c8;padding:7px 15px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;transition:all .18s;}
+.lbtn:hover{background:#b00;color:#fff;border-color:#b00;}
+.srow{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:14px;margin-bottom:24px;}
+.scrd{background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--sh);border-left:4px solid var(--bm);display:flex;align-items:center;gap:12px;}
+.scrd.gb{border-left-color:var(--gold);}
+.scrd.eb{border-left-color:var(--orange);}
+.scrd.bb{border-left-color:#1565c0;}
+.scico{font-size:27px;min-width:36px;text-align:center;}
+.scv{font-family:'Playfair Display',serif;font-size:23px;color:var(--bd);font-weight:900;line-height:1;}
+.scl{color:#bbb;font-size:11px;margin-top:2px;}
+.tcard{background:#fff;border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;margin-bottom:20px;}
+.thd{background:linear-gradient(110deg,var(--bd),var(--bm));color:#fff;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+.thd h3{font-family:'Playfair Display',serif;font-size:15.5px;}
+.thd span{font-size:11px;opacity:.7;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{background:var(--bp);color:var(--bd);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.5px;padding:10px 14px;text-align:left;}
+td{padding:10px 14px;border-bottom:1px solid #f2f2f2;color:var(--td);}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:#f4f8ff;}
+.bdg{display:inline-block;padding:3px 9px;border-radius:10px;font-size:10px;font-weight:700;}
+.bg{background:#e8f0fb;color:var(--bd);}
+.by{background:#fff8e1;color:var(--goldd);}
+.bb2{background:#e3f2fd;color:#1565c0;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* CONTACT */
+.csec{background:linear-gradient(140deg,var(--bd) 0%,#0e2550 100%);padding:60px 20px;}
+.cgrid{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1fr 1.45fr;gap:42px;align-items:start;}
+.ci h2{font-family:'Playfair Display',serif;color:#fff;font-size:27px;margin-bottom:10px;}
+.ci p{color:rgba(255,255,255,.72);font-size:13px;line-height:1.7;margin-bottom:22px;}
+.cd{display:flex;align-items:center;gap:11px;color:#fff;margin-bottom:13px;font-size:13px;}
+.cdico{width:35px;height:35px;background:rgba(255,255,255,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.cfc{background:#fff;border-radius:18px;padding:28px;box-shadow:var(--shl);}
+.cfc h3{font-family:'Playfair Display',serif;color:var(--bd);font-size:18px;margin-bottom:17px;}
+@media(max-width:700px){.cgrid{grid-template-columns:1fr;}.frow{grid-template-columns:1fr;}.g2{grid-template-columns:1fr;}}
+@media(max-width:580px){.fcard.wide{padding:26px 18px;}}
+
+/* TOAST */
+.toast{position:fixed;top:76px;right:16px;background:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 8px 36px rgba(0,0,0,.15);display:flex;align-items:flex-start;gap:10px;max-width:320px;z-index:99999;animation:slIn .35s ease;border-left:4px solid var(--bm);}
+.toast.gt{border-left-color:var(--gold);}
+.toast.et{border-left-color:#b00;}
+.toast.hide{animation:slOut .35s ease forwards;}
+@keyframes slIn{from{transform:translateX(130%);opacity:0;}to{transform:translateX(0);opacity:1;}}
+@keyframes slOut{from{transform:translateX(0);opacity:1;}to{transform:translateX(130%);opacity:0;}}
+.tico{font-size:20px;margin-top:1px;}
+.tttl{font-weight:700;color:var(--bd);font-size:13px;margin-bottom:2px;}
+.tmsg{font-size:11px;color:#888;}
+
+/* MODAL */
+.mov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:10000;align-items:center;justify-content:center;padding:16px;}
+.mov.show{display:flex;}
+.mbox{background:#fff;border-radius:22px;padding:30px;max-width:520px;width:100%;animation:fU .3s ease;position:relative;max-height:92vh;overflow-y:auto;}
+.mcls{position:absolute;top:12px;right:14px;background:#f2f2f2;border:none;border-radius:50%;width:29px;height:29px;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;}
+.eprev{background:#f4f8ff;border:1px solid #b3c9f0;border-radius:10px;padding:14px;font-family:monospace;font-size:11px;color:var(--td);line-height:1.75;margin:10px 0;max-height:250px;overflow-y:auto;white-space:pre-wrap;word-break:break-word;}
+.elbl{background:var(--bp);border-radius:7px;padding:7px 11px;font-size:11.5px;font-weight:700;color:var(--bd);margin-bottom:4px;display:flex;align-items:center;gap:6px;}
+
+/* FOOTER */
+footer{background:var(--bd);color:rgba(255,255,255,.65);text-align:center;padding:20px;font-size:12.5px;}
+footer strong{color:var(--gold);}
+footer p+p{margin-top:5px;font-size:11px;}
+
+/* SETUP NOTICE */
+.setup-notice{background:linear-gradient(135deg,#fff8e1,#fff3cd);border:2px solid var(--gold);border-radius:14px;padding:20px 22px;margin:20px auto;max-width:800px;}
+.setup-notice h3{color:var(--goldd);font-size:15px;margin-bottom:8px;}
+.setup-notice p{color:#555;font-size:12.5px;line-height:1.7;}
+.setup-notice code{background:#fff;border:1px solid #e0e0e0;padding:2px 6px;border-radius:4px;font-size:11px;color:var(--bd);}
+.step-list{margin-top:10px;padding-left:16px;}
+.step-list li{color:#555;font-size:12px;line-height:1.9;}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo-wrap" onclick="showPage('home')">
+    <div class="logo-circle">⚡</div>
+    <div>
+      <h1>Rudra Electrical</h1>
+      <p>Suresh Ashok Sonwale</p>
+    </div>
+  </div>
+  <div class="nav-links">
+    <button class="nb active" onclick="showPage('home')">Home</button>
+    <button class="nb" onclick="showPage('products')">⚡ Products</button>
+    <button class="nb" onclick="showPage('contact')">Contact</button>
+    <button class="nb" onclick="showPage('register')">Register</button>
+    <button class="nb" onclick="showPage('customer-login')">👤 Login</button>
+    <button class="nb prim" onclick="showPage('admin-login')">🔐 Admin</button>
+  </div>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast" style="display:none;">
+  <div class="tico" id="tIco">✅</div>
+  <div><div class="tttl" id="tTtl">Title</div><div class="tmsg" id="tMsg">Msg</div></div>
+</div>
+
+<!-- EMAIL MODAL -->
+<div class="mov" id="eModal">
+  <div class="mbox">
+    <button class="mcls" onclick="closeMod()">✕</button>
+    <div style="text-align:center;font-size:34px;margin-bottom:5px;">📧</div>
+    <h3 style="font-family:'Playfair Display',serif;color:var(--bd);text-align:center;font-size:19px;margin-bottom:3px;">Email Notifications</h3>
+    <p style="color:#aaa;font-size:12px;text-align:center;margin-bottom:10px;">These emails are sent to the respective addresses</p>
+    <div id="modalCont"></div>
+    <button onclick="closeMod()" class="fsub" style="margin-top:6px;">Close</button>
+  </div>
+</div>
+
+<!-- ═══ HOME ═══ -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="hp"></div><div class="hg"></div>
+    <div class="hc">
+      <div class="hbadge">⚡ Est. 2010 &nbsp;·&nbsp; Licensed Electrical Dealer</div>
+      <h1>Rudra Electrical<br><em>Suresh Ashok Sonwale</em></h1>
+      <p class="hero-owner">Complete Electrical Solutions — Loha, Nanded, Maharashtra</p>
+      <p class="hero-sub">📍 Loha, Nanded, Maharashtra 431708 · Your Trusted Electrical Partner Since 15 Years</p>
+      <div class="hbtns">
+        <button class="btn-gold" onclick="showPage('products')">⚡ Browse All Products</button>
+        <button class="btn-ow" onclick="showPage('register')">📋 Register Free</button>
+      </div>
+      <div class="hstats">
+        <div class="hs"><div class="hsn">200+</div><div class="hsl">Products</div></div>
+        <div class="hs"><div class="hsn">3500+</div><div class="hsl">Happy Customers</div></div>
+        <div class="hs"><div class="hsn">15+</div><div class="hsl">Years Experience</div></div>
+        <div class="hs"><div class="hsn">100%</div><div class="hsl">Genuine Brands</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EmailJS is configured and ready ✅ -->
+
+  <div class="sec">
+    <div class="sechd"><h2>Why Choose Rudra Electrical</h2><div class="div"></div><p>Trusted across Loha, Nanded, Latur &amp; entire Marathwada region</p></div>
+    <div class="fg2">
+      <div class="fc"><div class="fc-ico">🏅</div><div><h3>ISI Certified Products</h3><p>All electrical goods carry BIS/ISI certification ensuring safety and quality standards.</p></div></div>
+      <div class="fc"><div class="fc-ico">🔌</div><div><h3>Expert Electrical Advice</h3><p>Free guidance on product selection for home wiring, industrial setups &amp; solar installations.</p></div></div>
+      <div class="fc"><div class="fc-ico">💰</div><div><h3>Best Market Prices</h3><p>Competitive pricing with bulk discounts. Direct from authorized distributor — no middlemen.</p></div></div>
+      <div class="fc"><div class="fc-ico">📦</div><div><h3>Fresh Stock Always</h3><p>Genuine branded products stocked fresh every month from authorized company depots.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PRODUCTS ═══ -->
+<div id="page-products" class="page">
+  <div class="sec" style="max-width:1200px;">
+    <div class="sechd"><h2>⚡ Complete Product Range</h2><div class="div"></div><p>500+ genuine electrical products — Fans, Coolers, Wires, Switches, Boards, Plugs, Appliances &amp; more</p></div>
+    <div class="ftabs">
+      <button class="ftab active" onclick="flt('all',this)">All Products</button>
+      <button class="ftab" onclick="flt('fan',this)">🌀 Fans</button>
+      <button class="ftab" onclick="flt('cooler',this)">❄️ Coolers</button>
+      <button class="ftab" onclick="flt('wire',this)">🔌 Wires & Cables</button>
+      <button class="ftab" onclick="flt('switch',this)">🔘 Switches & Sockets</button>
+      <button class="ftab" onclick="flt('board',this)">🗂️ Boards & Panels</button>
+      <button class="ftab" onclick="flt('plug',this)">🔗 Plugs & Pins</button>
+      <button class="ftab" onclick="flt('light',this)">💡 Lights & LEDs</button>
+      <button class="ftab" onclick="flt('mcb',this)">⚙️ MCB & DB</button>
+      <button class="ftab" onclick="flt('appliance',this)">🏠 Home Appliances</button>
+      <button class="ftab" onclick="flt('motor',this)">🔧 Motors & Pumps</button>
+      <button class="ftab" onclick="flt('tool',this)">🛠️ Tools</button>
+    </div>
+    <div class="sgrid" id="sgrid"></div>
+  </div>
+</div>
+
+<!-- ═══ REGISTER ═══ -->
+<div id="page-register" class="page">
+  <div class="fpg">
+    <div class="fcard wide">
+      <div class="fhd">
+        <div class="fhd-ico gr">📋</div>
+        <h2>Customer Registration</h2>
+        <p>Create free account · Get order tracking &amp; exclusive offers</p>
+      </div>
+      <div id="regESB" class="hidden"></div>
+      <div class="alert aok hidden" id="regOk">✅ Registration successful! Confirmation sent to your email. Admin has been notified.</div>
+      <div class="frow">
+        <div class="fgrp"><label class="flbl">First Name *</label><input class="fi" id="rFN" placeholder="First name"></div>
+        <div class="fgrp"><label class="flbl">Last Name *</label><input class="fi" id="rLN" placeholder="Last name"></div>
+      </div>
+      <div class="fgrp">
+        <label class="flbl">Email Address * <small style="color:#bbb;font-size:10.5px;">— Confirmation email will be sent here</small></label>
+        <input class="fi" id="rEM" type="email" placeholder="your@email.com">
+      </div>
+      <div class="fgrp"><label class="flbl">Mobile Number *</label><input class="fi" id="rMO" placeholder="+91 XXXXX XXXXX"></div>
+      <div class="frow">
+        <div class="fgrp"><label class="flbl">City / Area *</label><input class="fi" id="rCT" placeholder="City / area name"></div>
+        <div class="fgrp"><label class="flbl">District</label><input class="fi" id="rDT" placeholder="District name"></div>
+      </div>
+      <div class="frow">
+        <div class="fgrp"><label class="flbl">Business / Shop Name</label><input class="fi" id="rLA" placeholder="e.g., Shree Electricals"></div>
+        <div class="fgrp"><label class="flbl">Type of Work</label><input class="fi" id="rCR" placeholder="e.g., Contractor, Retail, Home"></div>
+      </div>
+      <div class="frow">
+        <div class="fgrp"><label class="flbl">Password *</label><input class="fi" id="rP1" type="password" placeholder="Create password"></div>
+        <div class="fgrp"><label class="flbl">Confirm Password *</label><input class="fi" id="rP2" type="password" placeholder="Confirm password"></div>
+      </div>
+      <button class="fsub" id="regBtn" onclick="doRegister()">⚡ Create Account &amp; Send Emails</button>
+      <div class="flink">Already registered? <a onclick="showPage('customer-login')">Login here →</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CUSTOMER LOGIN ═══ -->
+<div id="page-customer-login" class="page">
+  <div class="fpg">
+    <div class="fcard">
+      <div class="fhd">
+        <div class="fhd-ico gr">👤</div>
+        <h2>Customer Login</h2>
+        <p>View orders, purchases &amp; account history</p>
+      </div>
+      <div class="alert aerr hidden" id="cErr">❌ Invalid email or password. Please try again.</div>
+      <div id="loginESB" class="hidden"></div>
+      <div class="fgrp"><label class="flbl">Email Address</label><input class="fi" id="cEM" type="email" placeholder="your@email.com" value="customer@example.com"></div>
+      <div class="fgrp"><label class="flbl">Password</label><input class="fi" id="cPW" type="password" placeholder="Password" value="elec123"></div>
+      <button class="fsub" id="loginBtn" onclick="doLogin()">Login to My Account</button>
+      <div class="fdiv">OR</div>
+      <div class="flink">New customer? <a onclick="showPage('register')">Register free →</a></div>
+      <div style="text-align:center;margin-top:8px;color:#ccc;font-size:10.5px;">Demo: customer@example.com / elec123</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ADMIN LOGIN ═══ -->
+<div id="page-admin-login" class="page">
+  <div class="fpg">
+    <div class="fcard">
+      <div class="fhd">
+        <div class="fhd-ico gl">🔐</div>
+        <h2>Admin Login</h2>
+        <p>Rudra Electrical Management Portal</p>
+      </div>
+      <div class="alert aerr hidden" id="aErr">❌ Wrong credentials.</div>
+      <div class="fgrp"><label class="flbl">Username</label><input class="fi" id="aUN" placeholder="admin" value="admin"></div>
+      <div class="fgrp"><label class="flbl">Password</label><input class="fi" id="aPW" type="password" placeholder="Admin password" value="admin123"></div>
+      <button class="fsub gbtn" onclick="doAdminLogin()">🔓 Enter Admin Panel</button>
+      <div style="text-align:center;margin-top:10px;color:#ccc;font-size:10.5px;">Demo: admin / admin123</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CUSTOMER DASHBOARD ═══ -->
+<div id="page-customer-dash" class="page">
+  <div class="dash">
+    <div class="dhdr">
+      <div class="dwl"><h2>👋 Welcome, <span id="cName">Customer</span>!</h2><p>Your Rudra Electrical Dashboard · <span id="cEmail" style="color:var(--bm);font-weight:600;"></span></p></div>
+      <button class="lbtn" onclick="logout('c')">⇠ Logout</button>
+    </div>
+    <div class="srow">
+      <div class="scrd"><div class="scico">🛒</div><div><div class="scv">12</div><div class="scl">Total Orders</div></div></div>
+      <div class="scrd gb"><div class="scico">⚡</div><div><div class="scv">8</div><div class="scl">Product Types</div></div></div>
+      <div class="scrd eb"><div class="scico">💰</div><div><div class="scv">₹18,400</div><div class="scl">Total Spent</div></div></div>
+      <div class="scrd bb"><div class="scico">📅</div><div><div class="scv">2024</div><div class="scl">Member Since</div></div></div>
+    </div>
+    <div class="tcard">
+      <div class="thd"><h3>🧾 My Purchase History (Date-wise)</h3><span>All purchases</span></div>
+      <div style="overflow-x:auto;"><table><thead><tr><th>#</th><th>Date</th><th>Product Name</th><th>Category</th><th>Qty</th><th>Amount</th><th>Status</th></tr></thead><tbody id="cPurchTbl"></tbody></table></div>
+    </div>
+    <div class="g2">
+      <div class="tcard">
+        <div class="thd"><h3>🏆 Top Products Purchased</h3></div>
+        <div style="padding:14px;" id="cTopSeeds"></div>
+      </div>
+      <div class="tcard">
+        <div class="thd"><h3>📦 Pending / Recent</h3></div>
+        <div style="padding:14px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid #f2f2f2;"><div><div style="font-weight:700;font-size:13px;">Havells Wire 2.5mm 90m</div><div style="font-size:11px;color:#bbb;">10 May 2025</div></div><span class="bdg by">Pending</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;"><div><div style="font-weight:700;font-size:13px;">Schneider MCB 32A</div><div style="font-size:11px;color:#bbb;">08 May 2025</div></div><span class="bdg bb2">Shipped</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ADMIN DASHBOARD ═══ -->
+<div id="page-admin-dash" class="page">
+  <div class="dash">
+    <div class="dhdr">
+      <div class="dwl"><h2>🏪 Admin Dashboard</h2><p>Rudra Electrical Management · <strong style="color:var(--bm);">shivdhanshirgole085@gmail.com</strong></p></div>
+      <button class="lbtn" onclick="logout('a')">⇠ Logout</button>
+    </div>
+    <div class="srow">
+      <div class="scrd"><div class="scico">📦</div><div><div class="scv">528</div><div class="scl">Total Orders</div></div></div>
+      <div class="scrd gb"><div class="scico">💰</div><div><div class="scv">₹4.6L</div><div class="scl">Revenue</div></div></div>
+      <div class="scrd eb"><div class="scico">👤</div><div><div class="scv">134</div><div class="scl">Customers</div></div></div>
+      <div class="scrd bb"><div class="scico">⚡</div><div><div class="scv">2,840</div><div class="scl">Items Sold</div></div></div>
+    </div>
+    <div class="tcard">
+      <div class="thd"><h3>📊 Date-wise Sales Report</h3><span>Latest 10</span></div>
+      <div style="overflow-x:auto;"><table><thead><tr><th>Date</th><th>Customer</th><th>Product</th><th>Category</th><th>Qty</th><th>Amount</th><th>Payment</th></tr></thead><tbody id="aSalesTbl"></tbody></table></div>
+    </div>
+    <div class="g2">
+      <div class="tcard"><div class="thd"><h3>🔥 Top Selling Products</h3></div><div style="padding:14px;" id="aTopSeeds"></div></div>
+      <div class="tcard"><div class="thd"><h3>👥 Recent Registrations</h3></div><div style="padding:14px;" id="aCusts"></div></div>
+    </div>
+    <div class="tcard">
+      <div class="thd" style="display:flex;align-items:center;justify-content:space-between;">
+        <h3>👤 All Registered Customers</h3>
+        <button onclick="resetCustomers()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:4px 12px;border-radius:6px;font-size:11px;cursor:pointer;">🔄 Reset Demo</button>
+      </div>
+      <div style="overflow-x:auto;"><table><thead><tr><th>#</th><th>Name</th><th>Email</th><th>Mobile</th><th>City</th><th>District</th><th>Business</th><th>Work Type</th><th>Reg. Date</th></tr></thead><tbody id="aAllCusts"></tbody></table></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<div id="page-contact" class="page">
+  <div class="csec">
+    <div class="cgrid">
+      <div class="ci">
+        <h2>📞 Get In Touch</h2>
+        <p>We help you choose the right electrical products. Visit us or send a message — we reply same day!</p>
+        <div class="cd"><div class="cdico">📍</div><div>1st Kaman, Mangalwar Bazar, Loha, Nanded, Maharashtra 431708</div></div>
+        <div class="cd"><div class="cdico">📞</div><div>+91 96044 97075</div></div>
+        <div class="cd"><div class="cdico">📧</div><div>shivdhanshirgole085@gmail.com</div></div>
+        <div class="cd"><div class="cdico">🕐</div><div>Mon–Sat: 9 AM – 8 PM · Sun: 10 AM – 2 PM</div></div>
+      </div>
+      <div class="cfc">
+        <h3>Send Us a Message</h3>
+        <div class="alert aok hidden" id="cOk">✅ Message sent! We'll contact you soon. A confirmation email has been sent to your inbox.</div>
+        <div id="contactESB" class="hidden"></div>
+        <div class="frow">
+          <div class="fgrp"><label class="flbl">Your Name *</label><input class="fi" id="cNm" placeholder="Full name"></div>
+          <div class="fgrp"><label class="flbl">Mobile *</label><input class="fi" id="cMb" placeholder="+91 XXXXX"></div>
+        </div>
+        <div class="fgrp"><label class="flbl">Email <small style="color:#aaa;font-size:10.5px;">— Confirmation will be sent here</small></label><input class="fi" id="cEm" type="email" placeholder="email@example.com"></div>
+        <div class="fgrp">
+          <label class="flbl">Product Interested In</label>
+          <select class="fi" id="cSd">
+            <option>-- Select Product Category --</option>
+            <optgroup label="🌀 Fans">
+              <option>Ceiling Fan (Bajaj / Crompton / Orient / Havells / Usha)</option>
+              <option>Table Fan</option><option>Wall Fan</option><option>Exhaust Fan</option><option>Tower Fan</option>
+            </optgroup>
+            <optgroup label="❄️ Coolers">
+              <option>Desert Cooler (Bajaj / Symphony / Kenstar)</option>
+              <option>Personal / Room Cooler</option><option>Window Cooler</option>
+            </optgroup>
+            <optgroup label="🔌 Wires & Cables">
+              <option>FR PVC Wire 1mm / 1.5mm / 2.5mm / 4mm / 6mm</option>
+              <option>Havells / Finolex / Polycab / RR Kabel Wire</option>
+              <option>Armoured Cable / Co-axial Cable</option><option>Flexible Wire / Extension Cord</option>
+            </optgroup>
+            <optgroup label="🔘 Switches & Sockets">
+              <option>Modular Switches (Legrand / Anchor / Havells / GM)</option>
+              <option>2-Pin / 3-Pin / 5-Pin Socket</option>
+              <option>16A Heavy Duty Socket</option><option>USB Charging Socket</option>
+            </optgroup>
+            <optgroup label="🗂️ Boards & Panels">
+              <option>Switch Board (Wooden / PVC / Metal)</option>
+              <option>Distribution Board (DB Box)</option><option>Junction Box / Conduit Box</option>
+              <option>PVC Conduit Pipe & Fittings</option>
+            </optgroup>
+            <optgroup label="🔗 Plugs & Pins">
+              <option>2-Pin Plug Top</option><option>3-Pin Plug Top 6A / 16A</option>
+              <option>Round Pin Top / Flat Pin Top</option><option>Extension Board / Multi-Plug</option>
+            </optgroup>
+            <optgroup label="💡 Lights & LEDs">
+              <option>LED Bulb (Philips / Havells / Syska / Wipro)</option>
+              <option>LED Batten / Tube Light</option><option>LED Panel Light</option>
+              <option>LED Street Light / Flood Light</option><option>Downlighter / Spotlight</option>
+            </optgroup>
+            <optgroup label="⚙️ MCB & DB">
+              <option>MCB Single Pole / Double Pole (Schneider / Legrand / Havells)</option>
+              <option>RCCB / ELCB</option><option>DB Box 4/6/8/12 Way</option>
+            </optgroup>
+            <optgroup label="🏠 Home Appliances">
+              <option>Electric Iron (Bajaj / Philips / Usha)</option>
+              <option>Electric Sigdi / Room Heater</option><option>Immersion Rod / Water Heater</option>
+              <option>Electric Kettle / Induction Cooktop</option><option>Mixer Grinder / Juicer</option>
+              <option>Geyser / Water Heater</option>
+            </optgroup>
+            <optgroup label="🔧 Motors & Pumps">
+              <option>Monoblock Pump (Kirloskar / CRI / Crompton)</option>
+              <option>Submersible Pump</option><option>Single Phase / 3 Phase Motor</option>
+            </optgroup>
+            <optgroup label="🛠️ Tools">
+              <option>Drill Machine / Angle Grinder</option>
+              <option>Multimeter / Clamp Meter</option><option>Screwdriver / Tester / Plier Set</option>
+              <option>Solar Panel / Charge Controller / Inverter</option>
+            </optgroup>
+            <option>Other / General Enquiry</option>
+          </select>
+        </div>
+        <div class="fgrp"><label class="flbl">Message</label><textarea class="fi" id="cMs" placeholder="Your query..."></textarea></div>
+        <button class="fsub" onclick="doContact()">📤 Send Message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>⚡ <strong>Rudra Electrical — Suresh Ashok Sonwale</strong> · 1st Kaman, Mangalwar Bazar, Loha, Nanded 431708</p>
+  <p>📧 shivdhanshirgole085@gmail.com &nbsp;|&nbsp; © 2025 All Rights Reserved · Quality Electrical Products</p>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════
+   EmailJS CONFIG — Replace with your real values
+   ═══════════════════════════════════════════════════════ */
+const EJS = {
+  SERVICE_ID: "service_utiba9a",
+  TEMPLATE_ID: "template_6tesf8r",
+  CUSTOMER_TEMPLATE_ID: "template_miw9mff",
+  PUBLIC_KEY: "ly0Z7_DwsSGmyS0l_"
+};
+const CONFIGURED = EJS.PUBLIC_KEY && !EJS.PUBLIC_KEY.startsWith('YOUR');
+
+const SHOP_EMAIL = 'shivdhanshirgole085@gmail.com';
+const SHOP_NAME  = 'Suresh Ashok Sonwale';
+const SHOP_PHONE = '+91 96044 97075';
+
+try { if(CONFIGURED) emailjs.init({ publicKey: EJS.PUBLIC_KEY }); } catch(e) {}
+
+/* ═══ PRODUCT DATA ═══ */
+const SEEDS = [
+  /* ── FANS ── */
+  {id:1,  n:'Bajaj Esteem 1200mm Ceiling Fan',      c:'fan',      i:'🌀',p:1450,u:'piece',  d:'Classic Bajaj fan. 1200mm sweep. 3 aluminium blades. Energy efficient. 5-year warranty.',b:'Bestseller'},
+  {id:2,  n:'Bajaj Regal Gold Ceiling Fan',          c:'fan',      i:'🌀',p:1850,u:'piece',  d:'Premium decorative fan. Copper motor. 74W. High air delivery. Golden finish.',b:'Popular'},
+  {id:3,  n:'Crompton Energion BLDC 1200mm',         c:'fan',      i:'🌀',p:3200,u:'piece',  d:'5-star BLDC motor. Only 28W. Remote control. Silent operation. 5-year warranty.',b:'Hot'},
+  {id:4,  n:'Orient Electric Aeroslim BLDC Fan',     c:'fan',      i:'🌀',p:2950,u:'piece',  d:'Ultra slim BLDC fan. Smart remote. Energy saving. Modern design.'},
+  {id:5,  n:'Havells Stealth Air BLDC Fan',          c:'fan',      i:'🌀',p:3400,u:'piece',  d:'Brushless DC motor. 5-speed remote. 35W power. Silent & energy efficient.'},
+  {id:6,  n:'Usha Striker Platinum 1200mm Fan',      c:'fan',      i:'🌀',p:1680,u:'piece',  d:'Copper motor. 75W. High speed. Rust-proof blades. ISI certified.'},
+  {id:7,  n:'Bajaj Midea Table Fan 400mm',           c:'fan',      i:'🌀',p:980,u:'piece',   d:'400mm table fan. 3-speed. Oscillation. 55W. Ideal for desk/bedroom use.'},
+  {id:8,  n:'Bajaj Wall Fan 400mm',                  c:'fan',      i:'🌀',p:1150,u:'piece',  d:'Wall mounted fan. 400mm. 3 speeds. 60W. Rust-proof guard. Easy mounting.'},
+  {id:9,  n:'Crompton Exhaust Fan 6"',               c:'fan',      i:'🌀',p:580,u:'piece',   d:'6-inch exhaust fan. Suitable for bathroom & kitchen. 150mm. Quiet motor.'},
+  {id:10, n:'Havells Exhaust Fan 9"',                c:'fan',      i:'🌀',p:980,u:'piece',   d:'9-inch exhaust fan. 230mm. High air displacement. Aluminium blades. ISI.'},
+  {id:11, n:'Orient Tower Fan 40"',                  c:'fan',      i:'🌀',p:4200,u:'piece',  d:'40-inch tower fan. 3 speeds. Oscillation. Remote. Timer. LED display.',b:'New'},
+  {id:12, n:'Bajaj Pedestal Fan 400mm',              c:'fan',      i:'🌀',p:1650,u:'piece',  d:'Height adjustable pedestal fan. 400mm. 3 speed. 65W. Wide oscillation.'},
+
+  /* ── COOLERS ── */
+  {id:13, n:'Bajaj Platini PC 2012 Desert Cooler',   c:'cooler',   i:'❄️',p:7500,u:'piece',  d:'200L tank. 185W motor. Ice chamber. High cooling for large rooms. Castor wheels.',b:'Bestseller'},
+  {id:14, n:'Bajaj DC 2016 Desert Cooler 70L',       c:'cooler',   i:'❄️',p:5800,u:'piece',  d:'70L water tank. 165W. Honeycomb pads. 4-way air deflection. Dura Pump.'},
+  {id:15, n:'Symphony Diet 12T Personal Cooler',     c:'cooler',   i:'❄️',p:4200,u:'piece',  d:'12L tank. 170W. Suitable for room up to 120 sq ft. Low noise. Touch control.',b:'Popular'},
+  {id:16, n:'Kenstar Cyclone 17 Personal Cooler',    c:'cooler',   i:'❄️',p:3800,u:'piece',  d:'17L tank. 3-speed settings. Ice tray. Castor wheels. 170W motor.'},
+  {id:17, n:'Bajaj MD 2020 Window Cooler',           c:'cooler',   i:'❄️',p:6500,u:'piece',  d:'Window cooler. 23L tank. Fixed in window opening. 185W. High air throw.'},
+  {id:18, n:'Symphony HiCool i 31L Desert Cooler',   c:'cooler',   i:'❄️',p:9200,u:'piece',  d:'31L tank. BLDC motor. Wi-Fi enabled. Covers 250+ sq ft. Remote control.',b:'Hot'},
+
+  /* ── WIRES & CABLES ── */
+  {id:19, n:'Havells FR Wire 1mm (90m)',              c:'wire',     i:'🔌',p:680,u:'90m roll', d:'1mm flame retardant wire. For lighting circuits. ISI certified. Single core PVC.',},
+  {id:20, n:'Havells FR Wire 1.5mm (90m)',            c:'wire',     i:'🔌',p:1150,u:'90m roll',d:'1.5mm FR PVC wire. Lighting & fan circuits. ISI certified. Havells brand.',b:'Bestseller'},
+  {id:21, n:'Havells FR Wire 2.5mm (90m)',            c:'wire',     i:'🔌',p:1850,u:'90m roll',d:'2.5mm power wire. For plug points, AC, fridge. ISI certified.',b:'Popular'},
+  {id:22, n:'Finolex FR Wire 1.5mm (90m)',            c:'wire',     i:'🔌',p:1080,u:'90m roll',d:'Finolex 1.5mm FR wire. High purity copper conductor. ISI marked.'},
+  {id:23, n:'Finolex FR Wire 2.5mm (90m)',            c:'wire',     i:'🔌',p:1780,u:'90m roll',d:'Finolex 2.5mm. For heavy-use circuits. Excellent insulation. ISI certified.'},
+  {id:24, n:'Polycab Wire 4mm (90m)',                 c:'wire',     i:'🔌',p:2800,u:'90m roll',d:'Polycab 4mm wire. For AC/geyser/industrial use. ISI marked. Copper conductor.'},
+  {id:25, n:'Polycab Wire 6mm (90m)',                 c:'wire',     i:'🔌',p:3850,u:'90m roll',d:'6mm heavy wire. For main panel, inverter, large motors. ISI certified.'},
+  {id:26, n:'RR Kabel Wire 1.5mm (90m)',              c:'wire',     i:'🔌',p:1020,u:'90m roll',d:'RR Kabel 1.5mm FR PVC wire. Trusted brand. ISI certified. Good for all wiring.'},
+  {id:27, n:'Havells Armoured Cable 3C×4mm (100m)',   c:'wire',     i:'🔒',p:4800,u:'100m roll',d:'Underground armoured cable. 3 core×4mm. Galvanised steel armour.',b:'New'},
+  {id:28, n:'Flexible Wire 2 Core 1mm (100m)',        c:'wire',     i:'🔌',p:780,u:'100m roll',d:'2-core flexible wire for appliances, extensions. PVC insulated.'},
+  {id:29, n:'Co-axial Cable (100m)',                  c:'wire',     i:'📡',p:1200,u:'100m roll',d:'RG6 co-axial cable for TV antenna, DTH connections. Low loss.'},
+  {id:30, n:'Extension Cord 5m (3-pin)',              c:'wire',     i:'🔌',p:280,u:'piece',   d:'5-metre 3-pin extension cord. 6A. ISI certified. PVC insulated wire.'},
+
+  /* ── SWITCHES & SOCKETS ── */
+  {id:31, n:'Legrand Myrius 6A Switch',               c:'switch',   i:'🔘',p:185,u:'piece',   d:'Modular 1-way switch. Smooth rocker. 10-year mechanical warranty. ISI.'},
+  {id:32, n:'Legrand Myrius 16A Switch',              c:'switch',   i:'🔘',p:220,u:'piece',   d:'16A switch for AC/geyser. Heavy duty. ISI certified.'},
+  {id:33, n:'Anchor Roma 6A Switch',                  c:'switch',   i:'🔘',p:95,u:'piece',    d:'Budget modular switch. Durable. ISI certified. White finish.',b:'Popular'},
+  {id:34, n:'Havells Coral 6A Switch',                c:'switch',   i:'🔘',p:140,u:'piece',   d:'Modular switch. Glossy finish. Smooth operation. ISI marked.'},
+  {id:35, n:'GM Modular Casablanca Switch',           c:'switch',   i:'🔘',p:165,u:'piece',   d:'Premium GM switch. Piano key type. 6A. ISI certified.'},
+  {id:36, n:'Legrand 6A 3-Pin Socket',                c:'switch',   i:'🔌',p:280,u:'piece',   d:'3-pin socket with shutter. Child proof. ISI certified.'},
+  {id:37, n:'Legrand 16A 3-Pin Socket',               c:'switch',   i:'🔌',p:340,u:'piece',   d:'Heavy-duty 16A socket. For AC/geyser. Shutter protected.',b:'Popular'},
+  {id:38, n:'Anchor 5-Pin Socket 6A',                 c:'switch',   i:'🔌',p:210,u:'piece',   d:'5-pin universal socket. Accepts 2-pin & 3-pin plugs. 6A. ISI.'},
+  {id:39, n:'USB Socket 5V 2.4A (Legrand)',           c:'switch',   i:'🔌',p:420,u:'piece',   d:'Modular USB charging socket. 5V/2.4A. USB-A + USB-C ports.'},
+  {id:40, n:'2-Way Switch (Staircase)',               c:'switch',   i:'🔘',p:180,u:'piece',   d:'2-way intermediate switch. For staircase/passage wiring. ISI certified.'},
+  {id:41, n:'TV/DTH Socket (Legrand)',                c:'switch',   i:'📺',p:260,u:'piece',   d:'Co-axial TV socket for antenna/DTH connections. Modular type.'},
+  {id:42, n:'Fan Regulator (Legrand / Havells)',      c:'switch',   i:'🌀',p:320,u:'piece',   d:'Electronic fan speed regulator. Step-type. 5-speed. 100W.'},
+
+  /* ── BOARDS & PANELS ── */
+  {id:43, n:'PVC Switch Board 3×3 (Anchor)',          c:'board',    i:'🗂️',p:85,u:'piece',    d:'3×3 PVC modular box. Pre-wired. Suitable for 2-3 modular switches.',b:'Bestseller'},
+  {id:44, n:'PVC Switch Board 4×4 (Anchor)',          c:'board',    i:'🗂️',p:120,u:'piece',   d:'4×4 modular PVC board. For larger switch/socket combinations.'},
+  {id:45, n:'Wooden Switch Board 3×3',                c:'board',    i:'🗂️',p:60,u:'piece',    d:'Traditional wooden board. 3×3 inch. For old wiring systems.'},
+  {id:46, n:'Metal DB Box 4-Way (Havells)',           c:'board',    i:'🗂️',p:850,u:'piece',   d:'4-way metal DB box. Surface/flush mount. Pre-wired busbar.'},
+  {id:47, n:'Plastic DB Box 6-Way (Legrand)',         c:'board',    i:'🗂️',p:980,u:'piece',   d:'6-way plastic distribution board. Incomer + 6 outgoers.'},
+  {id:48, n:'PVC Conduit Pipe 25mm (3m)',             c:'board',    i:'⬜',p:45,u:'piece',    d:'ISI PVC conduit pipe. 25mm. 3-metre length. For concealed wiring.'},
+  {id:49, n:'PVC Conduit Elbow / Bend 25mm',         c:'board',    i:'⬜',p:12,u:'piece',    d:'PVC conduit elbow bend. 25mm. For routing wires around corners.'},
+  {id:50, n:'Junction Box / PVC Ceiling Box',         c:'board',    i:'📦',p:25,u:'piece',    d:'PVC junction box. For joining wires in ceiling/wall. Standard size.'},
+  {id:51, n:'GI Metallic Switch Box 3×3',             c:'board',    i:'🗂️',p:95,u:'piece',    d:'Metal flush box for concealed wiring. 3×3. GI steel. Pre-punched holes.'},
+
+  /* ── PLUGS & PINS ── */
+  {id:52, n:'2-Pin Plug Top 6A (Anchor)',             c:'plug',     i:'🔗',p:28,u:'piece',    d:'Round 2-pin plug top. 6A. Moulded PVC. For table fans, small appliances.',b:'Bestseller'},
+  {id:53, n:'3-Pin Plug Top 6A (Anchor)',             c:'plug',     i:'🔗',p:45,u:'piece',    d:'3-pin flat/round plug top. 6A. For TVs, chargers, normal appliances.'},
+  {id:54, n:'3-Pin Plug Top 16A (Havells)',           c:'plug',     i:'🔗',p:85,u:'piece',    d:'Heavy duty 16A 3-pin top. For geyser, AC, refrigerator. ISI certified.',b:'Popular'},
+  {id:55, n:'5-Pin Plug Top (Anchor Roma)',           c:'plug',     i:'🔗',p:65,u:'piece',    d:'Universal 5-pin plug top. Accepts 2-pin & 3-pin points. Durable.'},
+  {id:56, n:'Multi-Plug Extension Board 4-Way',       c:'plug',     i:'🔗',p:320,u:'piece',   d:'4-socket extension board with 2m wire. Master switch. ISI certified.'},
+  {id:57, n:'Multi-Plug Extension Board 6-Way',       c:'plug',     i:'🔗',p:450,u:'piece',   d:'6-socket extension board. 2m wire. Surge protection. Master switch.',b:'Hot'},
+  {id:58, n:'2-Pin Flat Plug Top (ISI)',              c:'plug',     i:'🔗',p:22,u:'piece',    d:'Flat pin 2-pin plug. For small appliances, lamps. ISI certified.'},
+  {id:59, n:'Rewirable Plug Top 6A',                  c:'plug',     i:'🔗',p:35,u:'piece',    d:'Rewirable 3-pin top. 6A. User can replace wire. ISI certified.'},
+
+  /* ── LIGHTS & LEDs ── */
+  {id:60, n:'Philips 9W LED Bulb (Cool White)',       c:'light',    i:'💡',p:120,u:'piece',   d:'LED bulb. 900 lumens. 6500K cool white. E27 base. 2-year warranty.',b:'Bestseller'},
+  {id:61, n:'Philips 12W LED Bulb (Warm White)',      c:'light',    i:'💡',p:160,u:'piece',   d:'LED bulb. 1200 lumens. 3000K warm white. E27 base. 2-year warranty.'},
+  {id:62, n:'Havells 9W LED Bulb',                    c:'light',    i:'💡',p:135,u:'piece',   d:'Havells LED. 900 lumens. Cool/warm option. Long life. ISI certified.',b:'Popular'},
+  {id:63, n:'Syska 7W LED Bulb',                      c:'light',    i:'💡',p:95,u:'piece',    d:'Budget LED bulb. 7W. 700 lumens. 2-year warranty. ISI.'},
+  {id:64, n:'Wipro 18W LED Batten (2ft)',             c:'light',    i:'💡',p:280,u:'piece',   d:'2-foot LED tube light. 18W. Cool white. 3-year warranty. Easy fit.'},
+  {id:65, n:'Havells 36W LED Batten (4ft)',           c:'light',    i:'💡',p:420,u:'piece',   d:'4-foot LED batten. 36W. 4000 lumens. 3-year warranty. Flicker free.',},
+  {id:66, n:'Syska 18W LED Panel (Round)',            c:'light',    i:'💡',p:580,u:'piece',   d:'Round recessed LED panel. 18W. 6500K. For false ceiling. ISI certified.'},
+  {id:67, n:'Havells LED Panel 18W (Square)',         c:'light',    i:'💡',p:680,u:'piece',   d:'Square LED panel. 18W. 1800 lumens. Recessed. Cool white. 3-year warranty.'},
+  {id:68, n:'Syska 20W LED Street Light',             c:'light',    i:'🏮',p:1450,u:'piece',  d:'Outdoor LED. IP65 waterproof. 20W. 120° beam. 50000-hour life.'},
+  {id:69, n:'LED Flood Light 50W (Outdoor)',          c:'light',    i:'🏮',p:1800,u:'piece',  d:'50W flood light. IP65. Cold white. For boundary walls & outdoor areas.'},
+  {id:70, n:'LED Downlighter 7W (Spot)',              c:'light',    i:'💡',p:220,u:'piece',   d:'Recessed downlighter. 7W GU10/MR16 type. Cool white. False ceiling.'},
+  {id:71, n:'Philips LED Strip 5m (Warm)',            c:'light',    i:'💡',p:680,u:'5m roll', d:'LED strip light. 5m roll. Warm white. Adhesive back. 12V DC.'},
+  {id:72, n:'Night Lamp / Emergency LED Torch',       c:'light',    i:'🔦',p:180,u:'piece',   d:'Rechargeable emergency LED torch. 3-LED. Wall mountable. Auto on in power cut.'},
+
+  /* ── MCB & DB ── */
+  {id:73, n:'Schneider MCB 6A SP (C-curve)',          c:'mcb',      i:'⚙️',p:280,u:'piece',   d:'Single pole MCB. C-curve. 6A. Short circuit & overload protection.'},
+  {id:74, n:'Schneider MCB 16A SP',                   c:'mcb',      i:'⚙️',p:320,u:'piece',   d:'Schneider SP MCB 16A. For split AC, water heater circuits. ISI.',b:'Popular'},
+  {id:75, n:'Schneider MCB 32A SP',                   c:'mcb',      i:'⚙️',p:480,u:'piece',   d:'Heavy duty 32A MCB. For main incoming or large loads.',b:'Bestseller'},
+  {id:76, n:'Legrand MCB 6A / 16A / 32A',            c:'mcb',      i:'⚙️',p:350,u:'piece',   d:'Legrand DX3 MCB. Premium quality. ISI certified. Available in multiple ratings.'},
+  {id:77, n:'Havells MCB 6A / 16A / 32A',            c:'mcb',      i:'⚙️',p:310,u:'piece',   d:'Havells Vendetta MCB. ISI marked. Good quality at competitive price.'},
+  {id:78, n:'Schneider RCCB 25A 30mA',               c:'mcb',      i:'⚙️',p:1200,u:'piece',  d:'Residual current circuit breaker. 25A/30mA. Protects against electric shock.',b:'New'},
+  {id:79, n:'Legrand ELCB / RCCB 40A',               c:'mcb',      i:'⚙️',p:1650,u:'piece',  d:'Earth leakage circuit breaker. 40A. 30mA sensitivity. ISI certified.'},
+  {id:80, n:'Schneider 4-Way DB Box',                 c:'mcb',      i:'⚙️',p:780,u:'piece',   d:'4-way Schneider DB with incomer. Flush/surface mount. ISI certified.'},
+  {id:81, n:'Legrand 8-Way DB Box',                   c:'mcb',      i:'⚙️',p:1380,u:'piece',  d:'8-way DB with incomer. Metal enclosure. Pre-wired busbars. ISI.'},
+  {id:82, n:'Schneider 12-Way DB Box',                c:'mcb',      i:'⚙️',p:1950,u:'piece',  d:'12-way distribution board. For large homes/shops. With busbar cover.'},
+
+  /* ── HOME APPLIANCES ── */
+  {id:83, n:'Bajaj Majesty DX-7 Dry Iron',           c:'appliance',i:'🧲',p:480,u:'piece',   d:'1000W dry iron. Scratch-resistant soleplate. ISI marked. Light weight.',b:'Bestseller'},
+  {id:84, n:'Philips GC1905 Steam Iron',              c:'appliance',i:'🧲',p:1200,u:'piece',  d:'Philips steam iron. 1440W. Non-stick soleplate. 25g/min steam.',b:'Popular'},
+  {id:85, n:'Usha Techne Steam Iron',                 c:'appliance',i:'🧲',p:950,u:'piece',   d:'Usha 1600W steam iron. Variable steam. Anti-drip. Spray function.'},
+  {id:86, n:'Bajaj Majesty Room Heater (Segdi)',      c:'appliance',i:'🔥',p:1850,u:'piece',  d:'Bajaj 2000W quartz room heater. 2 heat settings. Thermostat. ISI certified.',b:'Hot'},
+  {id:87, n:'Orient Electric 2000W Room Heater',      c:'appliance',i:'🔥',p:1650,u:'piece',  d:'Electric fan heater. 2 heat settings. Safety thermal cut-off. ISI.'},
+  {id:88, n:'Bajaj Immersion Rod 1500W',              c:'appliance',i:'🌡️',p:280,u:'piece',   d:'1500W immersion heater rod. For 10-25L bucket. ISI certified. Copper element.',b:'Bestseller'},
+  {id:89, n:'Havells Immersion Rod 2000W',            c:'appliance',i:'🌡️',p:380,u:'piece',   d:'2000W heavy duty immersion rod. Fast heating. ISI certified. Stainless steel.'},
+  {id:90, n:'Bajaj Majesty Electric Kettle 1.7L',    c:'appliance',i:'🫖',p:1100,u:'piece',  d:'1.7L stainless steel kettle. 1500W. Auto shut-off. Boil-dry protection.'},
+  {id:91, n:'Philips Electric Kettle 1.5L',           c:'appliance',i:'🫖',p:1350,u:'piece',  d:'Philips 1500W kettle. 1.5L. Hidden element. 360° cord-free base.'},
+  {id:92, n:'Bajaj Majesty 1600W Induction Cooktop',  c:'appliance',i:'🍳',p:2200,u:'piece',  d:'1600W induction cooktop. 8 preset menus. Touch control. Auto-off timer.',b:'Popular'},
+  {id:93, n:'Prestige PIC 15 Induction Cooktop',      c:'appliance',i:'🍳',p:2600,u:'piece',  d:'1600W. 6 power levels. Feather touch. LED display. Child lock.'},
+  {id:94, n:'Bajaj Platini Geyser 15L',              c:'appliance',i:'🚿',p:5800,u:'piece',  d:'15L vertical geyser. 2000W. 5-star rating. Shock-proof ABS body.',b:'Hot'},
+  {id:95, n:'Havells Monza EC Geyser 25L',           c:'appliance',i:'🚿',p:8200,u:'piece',  d:'25L geyser. Enamel tank. 2kW. Magnesium anode. 7-year warranty.'},
+  {id:96, n:'Bajaj Rex Mixer Grinder 500W',           c:'appliance',i:'🍹',p:2800,u:'piece',  d:'3 stainless steel jars. 500W motor. Dry/wet grinding. ISI certified.'},
+  {id:97, n:'Philips HL7756 Mixer Grinder 750W',     c:'appliance',i:'🍹',p:3400,u:'piece',  d:'750W mixer grinder. 3 jars. Turbo function. 5-year motor warranty.',b:'Popular'},
+  {id:98, n:'Bajaj Platini Table Top Wet Grinder 2L', c:'appliance',i:'🪨',p:6500,u:'piece',  d:'2-litre drum. 150W. Stainless steel drum. For idli/dosa batter.'},
+  {id:99, n:'Usha Juicer Mixer Grinder 500W',        c:'appliance',i:'🍊',p:2600,u:'piece',  d:'Juicer + mixer + grinder. 3-in-1. 500W. 3 jars. ISI certified.'},
+
+  /* ── MOTORS & PUMPS ── */
+  {id:100,n:'Kirloskar 0.5HP Monoblock Pump',        c:'motor',    i:'🔧',p:4800,u:'piece',  d:'Single phase. 0.5HP. 35 LPM. For domestic water supply.',b:'Bestseller'},
+  {id:101,n:'Kirloskar 1HP Monoblock Pump',          c:'motor',    i:'🔧',p:6800,u:'piece',  d:'1HP monoblock. Single phase. High discharge for large homes.'},
+  {id:102,n:'Crompton 0.5HP Mini Crest Pump',        c:'motor',    i:'🔧',p:4200,u:'piece',  d:'Compact 0.5HP pump. For overhead tank filling. ISI certified.'},
+  {id:103,n:'Kirloskar 1HP Submersible Pump',        c:'motor',    i:'🔧',p:9500,u:'piece',  d:'1HP borewell submersible. Single phase. 5-year warranty. ISI.',b:'Popular'},
+  {id:104,n:'CRI 1HP Submersible Pump',              c:'motor',    i:'🔧',p:8800,u:'piece',  d:'CRI 1HP submersible. Energy efficient. For deep borewells.'},
+
+  /* ── TOOLS ── */
+  {id:105,n:'Bosch Drill Machine 550W 13mm',         c:'tool',     i:'🛠️',p:2100,u:'piece',  d:'Impact drill. 550W. 13mm chuck. Variable speed. Reverse function.',b:'Popular'},
+  {id:106,n:'Stanley Screwdriver Set 6-pc',          c:'tool',     i:'🛠️',p:480,u:'6pc set', d:'6-piece CRV screwdriver set. Phillips & flat head. Ergonomic handle.'},
+  {id:107,n:'Fluke 107 Clamp Meter',                 c:'tool',     i:'📐',p:4200,u:'piece',  d:'Digital clamp meter. AC/DC 400A. Auto range. True RMS. Safety rated.',b:'Hot'},
+  {id:108,n:'Digital Multimeter (DT-830B)',           c:'tool',     i:'📐',p:350,u:'piece',  d:'Digital multimeter. Measures AC/DC volts, amps, ohms, diode test.'},
+  {id:109,n:'Line Tester / Neon Tester',             c:'tool',     i:'🖊️',p:35,u:'piece',   d:'Neon screwdriver tester. For checking live wire. ISI certified.',b:'Bestseller'},
+  {id:110,n:'Combination Plier 8" (Stanley)',        c:'tool',     i:'🔧',p:280,u:'piece',   d:'8-inch combination plier. Chrome vanadium steel. Insulated handle.'},
+  {id:111,n:'Wire Stripper & Cutter',                c:'tool',     i:'✂️',p:180,u:'piece',   d:'Wire stripper for 0.5–6mm wires. Spring loaded. Ergonomic grip.'},
+  {id:112,n:'Electrician Insulation Tape',           c:'tool',     i:'🎗️',p:25,u:'roll',    d:'PVC electrical insulation tape. Black/red/green. 19mm×10m. Flame retardant.'},
+  {id:113,n:'Solar Charge Controller 40A MPPT',      c:'tool',     i:'☀️',p:2800,u:'piece',  d:'MPPT 40A controller. 12/24V auto. LCD display. For solar rooftop systems.',b:'New'},
+  {id:114,n:'Solar Panel 100W (Monocrystalline)',    c:'tool',     i:'☀️',p:4500,u:'piece',  d:'100W mono solar panel. 18V. High efficiency. IP67 junction box.'},
+];
+
+const PURCHASES = [
+  {date:'2025-05-10',s:'Havells FR PVC Wire 2.5mm',c:'Wire',q:5,a:9250,st:'Delivered'},
+  {date:'2025-05-05',s:'Schneider MCB 32A SP',c:'MCB',q:10,a:4800,st:'Delivered'},
+  {date:'2025-04-28',s:'Crompton BLDC Fan 48"',c:'Fan',q:2,a:6400,st:'Delivered'},
+  {date:'2025-04-15',s:'Philips 9W LED Bulb',c:'Light',q:20,a:2400,st:'Delivered'},
+  {date:'2025-04-02',s:'Legrand Myrius Switch 6A',c:'Switch',q:15,a:2775,st:'Delivered'},
+  {date:'2025-03-18',s:'Kirloskar 0.5HP Mono Pump',c:'Motor',q:1,a:4800,st:'Delivered'},
+  {date:'2025-05-10',s:'Havells FR PVC Wire 2.5mm',c:'Wire',q:3,a:5550,st:'Pending'},
+  {date:'2025-05-08',s:'Schneider 8-way DB Box',c:'MCB',q:2,a:2300,st:'Shipped'},
+];
+
+const SALES = [
+  {date:'2025-05-12',cu:'Ravi Thakur',s:'Havells Wire 2.5mm',c:'Wire',q:20,a:37000,p:'UPI'},
+  {date:'2025-05-11',cu:'Amol Jagtap',s:'Schneider MCB 32A',c:'MCB',q:30,a:14400,p:'Cash'},
+  {date:'2025-05-10',cu:'Priya Sharma',s:'Crompton BLDC Fan',c:'Fan',q:5,a:16000,p:'UPI'},
+  {date:'2025-05-09',cu:'Santosh Kale',s:'Philips LED Bulb 9W',c:'Light',q:100,a:12000,p:'Cheque'},
+  {date:'2025-05-08',cu:'Deepak Patil',s:'Legrand Socket 16A',c:'Switch',q:20,a:6400,p:'UPI'},
+  {date:'2025-05-07',cu:'Nilesh More',s:'Kirloskar 1HP Submersible',c:'Motor',q:2,a:17000,p:'Cheque'},
+  {date:'2025-05-06',cu:'Ganesh Wagh',s:'Bosch Drill Machine',c:'Tool',q:3,a:6300,p:'Cash'},
+  {date:'2025-05-05',cu:'Sunil Deshmukh',s:'Havells LED Panel 18W',c:'Light',q:10,a:6800,p:'UPI'},
+  {date:'2025-05-04',cu:'Rahul Londhe',s:'Havells Wire 1.5mm',c:'Wire',q:15,a:17250,p:'Cash'},
+  {date:'2025-05-03',cu:'Meera Kulkarni',s:'Schneider DB Box 8-way',c:'MCB',q:4,a:4600,p:'UPI'},
+];
+
+const DEFAULT_CUSTOMERS = [
+  {name:'Ravi Thakur',email:'customer@example.com',pass:'elec123',mobile:'9876543210',city:'Loha',district:'Nanded',land:'Thakur Electricals',crops:'Contractor',date:'2024-06-15'},
+  {name:'Amol Jagtap',email:'amol@electrical.com',pass:'elec456',mobile:'8765432109',city:'Nashik',district:'Nashik',land:'Jagtap Wiring Works',crops:'Retail',date:'2024-08-20'},
+];
+
+function loadCustomers(){
+  try {
+    const saved = localStorage.getItem('rudra_customers');
+    if(saved){
+      const parsed = JSON.parse(saved);
+      const emails = new Set(parsed.map(c=>c.email));
+      DEFAULT_CUSTOMERS.forEach(d=>{ if(!emails.has(d.email)) parsed.unshift(d); });
+      return parsed;
+    }
+  } catch(e){}
+  return [...DEFAULT_CUSTOMERS];
+}
+function saveCustomers(){
+  try { localStorage.setItem('rudra_customers', JSON.stringify(CUSTOMERS)); } catch(e){}
+}
+
+let CUSTOMERS = loadCustomers();
+
+/* ═══ NAV ═══ */
+function showPage(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  window.scrollTo(0,0);
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  const map={'home':0,'products':1,'contact':2,'register':3,'customer-login':4,'admin-login':5};
+  const btns=document.querySelectorAll('.nb');
+  if(map[p]!==undefined) btns[map[p]]?.classList.add('active');
+}
+
+/* ═══ TOAST ═══ */
+let _tt;
+function toast(ic,ttl,msg,tp){
+  const t=document.getElementById('toast');
+  document.getElementById('tIco').textContent=ic;
+  document.getElementById('tTtl').textContent=ttl;
+  document.getElementById('tMsg').textContent=msg;
+  t.className='toast'+(tp==='gold'?' gt':tp==='err'?' et':'');
+  t.style.display='flex';clearTimeout(_tt);
+  _tt=setTimeout(()=>{t.classList.add('hide');setTimeout(()=>{t.style.display='none';t.classList.remove('hide');},380);},5500);
+}
+
+/* ═══ EMAIL MODAL ═══ */
+function showMod(emails){
+  document.getElementById('modalCont').innerHTML=emails.map((e,i)=>`
+    <div class="elbl">📧 Email ${i+1}: ${e.label}</div>
+    <div class="eprev">${e.body}</div>
+  `).join('');
+  document.getElementById('eModal').classList.add('show');
+}
+function closeMod(){document.getElementById('eModal').classList.remove('show');}
+
+/* ═══ EMAIL STATUS ═══ */
+function setESB(id,state,msg){
+  const el=document.getElementById(id);if(!el)return;
+  el.className='esb '+state;
+  el.innerHTML=state==='sending'?`<div class="spin"></div><span>${msg}</span>`:`<span>${state==='sent'?'✅':'⚠️'} ${msg}</span>`;
+  el.classList.remove('hidden');
+}
+
+/* ═══ SEND EMAIL ═══ */
+async function sendEJS(tplId, params){
+  if(!CONFIGURED) return {ok:false,reason:'not-configured'};
+  try{
+    const r = await emailjs.send(EJS.SERVICE_ID, tplId, params);
+    return {ok:true,r};
+  }catch(e){
+    console.warn('EmailJS:',e);
+    return {ok:false,reason:e.text||e.message||'error'};
+  }
+}
+
+/* ═══ PRODUCTS ═══ */
+function renderSeeds(f){
+  const list=f==='all'?SEEDS:SEEDS.filter(s=>s.c===f);
+  document.getElementById('sgrid').innerHTML=list.map(s=>`
+    <div class="sc2">
+      <div class="sci">${s.i}${s.b?`<span class="scb-badge">${s.b}</span>`:''}</div>
+      <div class="scbd">
+        <div class="sccat">${s.c}</div>
+        <div class="scnm">${s.n}</div>
+        <div class="scdesc">${s.d}</div>
+        <div class="scft">
+          <div class="scpr">₹${s.p} <small>/${s.u}</small></div>
+          <button class="abtn" onclick="addCart('${s.n}')">+ Enquire</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+function flt(c,el){document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('active'));el.classList.add('active');renderSeeds(c);}
+function addCart(n){toast('⚡','Enquiry Added!',n+' added to enquiry list.','green');}
+
+/* ═══ REGISTER ═══ */
+async function doRegister(){
+  const fn=document.getElementById('rFN').value.trim();
+  const ln=document.getElementById('rLN').value.trim();
+  const em=document.getElementById('rEM').value.trim();
+  const mo=document.getElementById('rMO').value.trim();
+  const ct=document.getElementById('rCT').value.trim();
+  const dt=document.getElementById('rDT').value.trim();
+  const la=document.getElementById('rLA').value.trim();
+  const cr=document.getElementById('rCR').value.trim();
+  const p1=document.getElementById('rP1').value;
+  const p2=document.getElementById('rP2').value;
+
+  if(!fn||!ln||!em||!mo||!ct||!p1){toast('❌','Error','Please fill all required fields.','err');return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){toast('❌','Error','Enter a valid email address.','err');return;}
+  if(p1!==p2){toast('❌','Error','Passwords do not match.','err');return;}
+  if(p1.length<5){toast('❌','Error','Password must be at least 5 characters.','err');return;}
+  if(CUSTOMERS.find(c=>c.email===em)){toast('❌','Error','This email is already registered.','err');return;}
+
+  const btn=document.getElementById('regBtn');
+  btn.disabled=true;btn.textContent='📤 Sending...';
+  CUSTOMERS.push({name:fn+' '+ln,email:em,pass:p1,mobile:mo,city:ct,district:dt,land:la,crops:cr,date:new Date().toISOString().slice(0,10)});
+  saveCustomers();
+
+  const now=new Date().toLocaleString('en-IN',{dateStyle:'full',timeStyle:'short'});
+
+  const adminBody =
+`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RUDRA ELECTRICAL — New Customer Registered
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Namaskar ${SHOP_NAME} ji,
+
+A new customer has registered on your website.
+
+━━ CUSTOMER DETAILS ━━━━━━━━━━━━━━━━━━
+  Name        : ${fn} ${ln}
+  Email       : ${em}
+  Mobile      : ${mo}
+  City        : ${ct}
+  District    : ${dt}
+  Business    : ${la||'Not provided'}
+  Work Type   : ${cr||'Not provided'}
+  Registered  : ${now}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Please follow up with this customer.
+
+Rudra Electrical Automated System
+${SHOP_EMAIL}`;
+
+  const custBody =
+`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RUDRA ELECTRICAL — Registration Confirmed ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Namaskar ${fn} ji,
+
+✅ Your account has been successfully created!
+
+━━ YOUR ACCOUNT DETAILS ━━━━━━━━━━━━━━
+  Name        : ${fn} ${ln}
+  Email       : ${em}
+  Mobile      : ${mo}
+  Registered  : ${now}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 Our team will contact you shortly.
+   ${SHOP_PHONE}
+   ${SHOP_EMAIL}
+
+With regards,
+${SHOP_NAME}
+Rudra Electrical, 1st Kaman, Mangalwar Bazar, Loha, Nanded, Maharashtra 431708
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+
+  setESB('regESB','sending','Sending registration emails...');
+
+  const promises = [
+    sendEJS(EJS.TEMPLATE_ID, {
+      to_email:SHOP_EMAIL,to_name:SHOP_NAME,
+      from_name:fn+' '+ln,cust_email:em,
+      cust_mobile:mo,cust_city:ct,
+      reg_time:now,
+      subject:'⚡ New Registration — '+fn+' '+ln+' | '+mo,
+      message:adminBody,
+    }),
+    sendEJS(EJS.CUSTOMER_TEMPLATE_ID, {
+      to_email:em,to_name:fn+' '+ln,
+      shop_name:SHOP_NAME,shop_email:SHOP_EMAIL,
+      subject:'✅ Registration Confirmed — Rudra Electrical',
+      message:custBody,
+    })
+  ];
+
+  const [r1,r2] = await Promise.all(promises);
+  btn.disabled=false;btn.textContent='⚡ Create Account & Send Emails';
+
+  if(r1.ok){
+    const msg = r2?.ok ? '✅ 2 emails sent — Admin notified + confirmation to '+em
+      : '✅ Registered! Admin notified (customer confirmation failed)';
+    setESB('regESB','sent',msg);
+    document.getElementById('regOk').classList.remove('hidden');
+    toast('✅','Registered!','Welcome to Rudra Electrical!','green');
+    renderAdminDash();
+    const modEmails = [{label:'Admin Alert → '+SHOP_EMAIL,body:adminBody},{label:'Customer Confirmation → '+em,body:custBody}];
+    setTimeout(()=>showMod(modEmails),700);
+  } else if(!CONFIGURED){
+    setESB('regESB','failed','Preview mode — configure EmailJS to send live emails');
+    document.getElementById('regOk').classList.remove('hidden');
+    toast('✅','Registered!','Configure EmailJS to send live emails.','gold');
+    renderAdminDash();
+    const modEmails = [{label:'Admin Alert → '+SHOP_EMAIL,body:adminBody},{label:'Customer Confirmation → '+em,body:custBody}];
+    setTimeout(()=>showMod(modEmails),700);
+  } else {
+    setESB('regESB','failed','Email failed — but account saved. Call us at '+SHOP_PHONE);
+    toast('⚠️','Account Saved','Email failed. Account created. Call us for confirmation.','gold');
+    renderAdminDash();
+  }
+}
+
+/* ═══ LOGIN ═══ */
+async function doLogin(){
+  const em=document.getElementById('cEM').value.trim();
+  const pw=document.getElementById('cPW').value;
+  const errEl=document.getElementById('cErr');
+  const found=CUSTOMERS.find(c=>c.email===em && c.pass===pw);
+  if(!found){errEl.classList.remove('hidden');return;}
+  errEl.classList.add('hidden');
+
+  const btn=document.getElementById('loginBtn');
+  btn.disabled=true;btn.textContent='🔄 Logging in...';
+
+  const now=new Date().toLocaleString('en-IN',{dateStyle:'full',timeStyle:'short'});
+
+  const loginAlertBody =
+`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RUDRA ELECTRICAL — Customer Login Alert 🔔
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+To      : ${SHOP_EMAIL}
+Subject : 🔔 Customer Signed In — ${found.name}
+
+Namaskar ${SHOP_NAME} ji,
+
+Your customer has just logged in to Rudra Electrical website.
+
+━━ LOGIN DETAILS ━━━━━━━━━━━━━━━━━━━━━
+  Customer  : ${found.name}
+  Email     : ${em}
+  Mobile    : ${found.mobile}
+  City      : ${found.city}
+  Login At  : ${now}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Check Admin Dashboard to see their activity
+and purchase history.
+
+Rudra Electrical Automated System
+${SHOP_EMAIL}`;
+
+  setESB('loginESB','sending','Notifying admin of your login...');
+
+  const r = await sendEJS(EJS.TEMPLATE_ID, {
+    to_email: SHOP_EMAIL, to_name: SHOP_NAME,
+    from_name: found.name, cust_email: em,
+    cust_mobile: found.mobile, cust_city: found.city,
+    reg_time: now, subject: '🔔 Customer Login — '+found.name,
+    message: loginAlertBody,
+  });
+
+  btn.disabled=false;btn.textContent='Login to My Account';
+  setESB('loginESB', r.ok?'sent':'failed',
+    r.ok ? 'Admin notified at '+SHOP_EMAIL
+         : CONFIGURED ? 'EmailJS error — check config'
+                      : 'Preview shown (configure EmailJS for live notifications)');
+
+  document.getElementById('cName').textContent=found.name.split(' ')[0];
+  document.getElementById('cEmail').textContent=found.email;
+  renderCustDash();
+  showPage('customer-dash');
+  toast('✅','Welcome Back!',found.name.split(' ')[0]+' ji, login successful!','green');
+  setTimeout(()=>showMod([{label:'Login Alert → '+SHOP_EMAIL, body: loginAlertBody}]),700);
+}
+
+/* ═══ ADMIN LOGIN ═══ */
+function doAdminLogin(){
+  const u=document.getElementById('aUN').value.trim();
+  const p=document.getElementById('aPW').value;
+  if(u==='admin'&&p==='admin123'){
+    document.getElementById('aErr').classList.add('hidden');
+    renderAdminDash();
+    showPage('admin-dash');
+    toast('🔐','Admin Access','Welcome, Admin!','gold');
+  } else {
+    document.getElementById('aErr').classList.remove('hidden');
+  }
+}
+
+/* ═══ CUSTOMER DASHBOARD ═══ */
+function renderCustDash(){
+  const tb=document.getElementById('cPurchTbl');
+  tb.innerHTML=PURCHASES.map((p,i)=>`<tr>
+    <td>${i+1}</td><td>${p.date}</td><td>${p.s}</td><td>${p.c}</td>
+    <td>${p.q}</td><td>₹${p.a.toLocaleString()}</td>
+    <td><span class="bdg ${p.st==='Delivered'?'bg':p.st==='Pending'?'by':'bb2'}">${p.st}</span></td>
+  </tr>`).join('');
+  const top=document.getElementById('cTopSeeds');
+  const freq={};
+  PURCHASES.forEach(p=>freq[p.s]=(freq[p.s]||0)+p.q);
+  top.innerHTML=Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([n,q])=>`
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f2f2f2;">
+      <div style="font-weight:700;font-size:13px;">⚡ ${n}</div>
+      <span class="bdg bg">${q} units</span>
+    </div>`).join('');
+}
+
+/* ═══ ADMIN DASHBOARD ═══ */
+function renderAdminDash(){
+  const tb=document.getElementById('aSalesTbl');
+  tb.innerHTML=SALES.map(s=>`<tr>
+    <td>${s.date}</td><td>${s.cu}</td><td>${s.s}</td><td>${s.c}</td>
+    <td>${s.q}</td><td>₹${s.a.toLocaleString()}</td>
+    <td><span class="bdg ${s.p==='Cash'?'bg':s.p==='UPI'?'bb2':'by'}">${s.p}</span></td>
+  </tr>`).join('');
+
+  const freq={};
+  SALES.forEach(s=>freq[s.s]=(freq[s.s]||0)+s.q);
+  document.getElementById('aTopSeeds').innerHTML=Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([n,q],i)=>`
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f2f2f2;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:20px;height:20px;background:var(--bp);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--bd);">${i+1}</div>
+        <div style="font-weight:700;font-size:13px;">⚡ ${n}</div>
+      </div>
+      <span class="bdg bg">${q} sold</span>
+    </div>`).join('');
+
+  /* Recent customers — newest first with NEW badge */
+  const sortedCusts = CUSTOMERS.slice().reverse();
+  document.getElementById('aCusts').innerHTML = sortedCusts.length === 0
+    ? '<div style="color:#aaa;font-size:13px;text-align:center;padding:16px;">No customers yet</div>'
+    : sortedCusts.slice(0,5).map((c,i)=>`
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f2f2f2;">
+      <div>
+        <div style="font-weight:700;font-size:13px;">👤 ${c.name}${i===0?'<span style="margin-left:6px;background:#e8f0fb;color:var(--bd);font-size:9px;font-weight:800;padding:2px 7px;border-radius:8px;">NEW</span>':''}</div>
+        <div style="font-size:11px;color:#bbb;">${c.city||'—'} · ${c.mobile||c.email} · ${c.date}</div>
+      </div><span class="bdg bb2">Active</span>
+    </div>`).join('');
+
+  /* Live customer count on stat card */
+  const custEl = document.querySelector('#page-admin-dash .scrd.eb .scv');
+  if(custEl) custEl.textContent = CUSTOMERS.length;
+
+  /* Full all-customers table — newest first with NEW badge */
+  const allCustsEl = document.getElementById('aAllCusts');
+  if(allCustsEl){
+    const sorted = CUSTOMERS.slice().reverse();
+    allCustsEl.innerHTML = sorted.map((c,i)=>`<tr>
+      <td>${i+1}</td>
+      <td><strong>${c.name}</strong>${i===0?'<span style="margin-left:5px;background:#e8f0fb;color:var(--bd);font-size:9px;font-weight:800;padding:2px 6px;border-radius:6px;">NEW</span>':''}</td>
+      <td style="font-size:12px;">${c.email}</td>
+      <td>${c.mobile||'—'}</td>
+      <td>${c.city||'—'}</td>
+      <td>${c.district||'—'}</td>
+      <td>${c.land||'—'}</td>
+      <td>${c.crops||'—'}</td>
+      <td>${c.date}</td>
+    </tr>`).join('');
+  }
+}
+
+function resetCustomers(){
+  if(!confirm('Reset to demo customers only? All new registrations will be removed.')) return;
+  localStorage.removeItem('rudra_customers');
+  CUSTOMERS = loadCustomers();
+  renderAdminDash();
+  toast('🔄','Reset Done','Customer list reset to demo data.','gold');
+}
+
+/* ═══ LOGOUT ═══ */
+function logout(r){
+  showPage(r==='a'?'admin-login':'customer-login');
+  toast('👋','Logged Out','You have been logged out safely.','green');
+}
+
+/* ═══ CONTACT ═══ */
+async function doContact(){
+  const n  = document.getElementById('cNm').value.trim();
+  const m  = document.getElementById('cMb').value.trim();
+  const em = document.getElementById('cEm').value.trim();
+  const sd = document.getElementById('cSd').value;
+  const ms = document.getElementById('cMs').value.trim();
+
+  if(!n||!m){toast('❌','Error','Please enter your name & mobile.','err');return;}
+
+  const btn = document.querySelector('#page-contact .fsub');
+  btn.disabled=true; btn.textContent='📤 Sending...';
+
+  const now = new Date().toLocaleString('en-IN',{dateStyle:'full',timeStyle:'short'});
+
+  const contactBody =
+`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RUDRA ELECTRICAL — New Contact Message 📩
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Namaskar ${SHOP_NAME} ji,
+
+A visitor has sent a message via your website.
+
+━━ CONTACT DETAILS ━━━━━━━━━━━━━━━━━━━
+  Name        : ${n}
+  Mobile      : ${m}
+  Email       : ${em||'Not provided'}
+  Product     : ${sd||'Not selected'}
+  Message     : ${ms||'No message'}
+  Sent At     : ${now}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Please call or reply to this customer at your earliest.
+
+Rudra Electrical Automated System
+${SHOP_EMAIL}`;
+
+  const custConfirmBody = em ?
+`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RUDRA ELECTRICAL — Message Received! ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Namaskar ${n} ji,
+
+✅ Your message has been received by Rudra Electrical!
+We will contact you very soon.
+
+━━ YOUR QUERY DETAILS ━━━━━━━━━━━━━━━━
+  Name        : ${n}
+  Mobile      : ${m}
+  Product     : ${sd||'Not selected'}
+  Message     : ${ms||'—'}
+  Received At : ${now}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 Our team will call you shortly.
+   ${SHOP_PHONE}
+   ${SHOP_EMAIL}
+
+With regards,
+${SHOP_NAME}
+Rudra Electrical, 1st Kaman, Mangalwar Bazar, Loha, Nanded, Maharashtra 431708
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━` : null;
+
+  setESB('contactESB','sending','Sending emails — Admin alert + Your confirmation...');
+
+  const promises = [
+    sendEJS(EJS.TEMPLATE_ID, {
+      to_email: SHOP_EMAIL, to_name: SHOP_NAME,
+      from_name: n, cust_email: em||SHOP_EMAIL,
+      cust_mobile: m, cust_city: '—',
+      reg_time: now,
+      subject: '📩 Contact Query — ' + n + ' | ' + m,
+      message: contactBody,
+    })
+  ];
+  if(em && custConfirmBody){
+    promises.push(sendEJS(EJS.CUSTOMER_TEMPLATE_ID, {
+      to_email: em, to_name: n,
+      shop_name: SHOP_NAME, shop_email: SHOP_EMAIL,
+      subject: '✅ Message Received — Rudra Electrical',
+      message: custConfirmBody,
+    }));
+  }
+
+  const results = await Promise.all(promises);
+  const r1 = results[0];
+  const r2 = results[1] || null;
+
+  btn.disabled=false; btn.textContent='📤 Send Message';
+
+  if(r1.ok){
+    const emailsSent = em && r2?.ok
+      ? '✅ 2 emails sent! Admin notified + confirmation sent to ' + em
+      : '✅ Message sent to admin' + (em && !r2?.ok ? ' (customer confirmation failed)' : ' (no customer email provided)');
+    setESB('contactESB','sent', emailsSent);
+    document.getElementById('cOk').classList.remove('hidden');
+    toast('✅','Message Sent!','We will contact you soon.','green');
+    document.getElementById('cNm').value='';
+    document.getElementById('cMb').value='';
+    document.getElementById('cEm').value='';
+    document.getElementById('cSd').selectedIndex=0;
+    document.getElementById('cMs').value='';
+    const modEmails = [{label:'Admin Alert → '+SHOP_EMAIL, body: contactBody}];
+    if(em && custConfirmBody) modEmails.push({label:'Customer Confirmation → '+em, body: custConfirmBody});
+    setTimeout(()=>showMod(modEmails), 700);
+  } else if(!CONFIGURED){
+    setESB('contactESB','failed','Preview shown (configure EmailJS to send live emails)');
+    document.getElementById('cOk').classList.remove('hidden');
+    toast('✅','Message Noted!','Configure EmailJS to send live email.','gold');
+    const modEmails = [{label:'Admin Alert → '+SHOP_EMAIL, body: contactBody}];
+    if(em && custConfirmBody) modEmails.push({label:'Customer Confirmation → '+em, body: custConfirmBody});
+    setTimeout(()=>showMod(modEmails), 700);
+  } else {
+    setESB('contactESB','failed','Send failed — please call us directly at '+SHOP_PHONE);
+    toast('❌','Send Failed','EmailJS error. Please call us directly.','err');
+  }
+}
+
+/* ═══ INIT ═══ */
+renderSeeds('all');
+</script>
+</body>
+</html>
